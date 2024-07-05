@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import RegisterScreen from './src/register/register';
+import MerchantDetails from './src/food/food';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -64,18 +65,20 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        {/* <Header /> */}
-        <RegisterScreen />
-      </ScrollView>
-    </SafeAreaView>
+    // <SafeAreaView style={backgroundStyle}>
+    //   {/* <StatusBar
+    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+    //     backgroundColor={backgroundStyle.backgroundColor}
+    //   /> */}
+    //   <ScrollView
+    //     contentInsetAdjustmentBehavior="automatic"
+    //     style={backgroundStyle}>
+    //     {/* <Header /> */}
+    //     <MerchantDetails />
+    //     {/* <RegisterScreen /> */}
+    //   </ScrollView>
+    // </SafeAreaView>
+        <MerchantDetails />
   );
 }
 
